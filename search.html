@@ -6,21 +6,35 @@ title: CRAN package search results
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h3>CRAN R package search</h3>
+      <h3><a href="index.html">CRAN R package search</a></h3>
       <form role="form" action="search.html">
         <div class="form-group">
-          <input class="form-control input-sm" id="exampleInputEmail1"
-                 autofocus="autofocus">  
+          <input class="form-control input-sm" id="cran_input"
+                 autofocus="autofocus" name="q">
         </div>
         <button type="submit" class="btn btn-default btn-sm">Search</button>
       </form>
     </div>
   </div>
 
+  <hr>
+
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-8">
       <!-- Search results come here -->
+      <div id="search_no_results"></div>
+      <div id="search_results"></div>
+      <div id="search_pagination" class="pagination"></div>
     </div>
   </div>
 
 </div>  
+
+<script>
+  var myindex="cran-devel"
+</script>
+<script src="js/moment.min.js"></script>
+<script src="js/elasticsearch.min.js"></script>
+<script src="js/cran_search.js"></script>
+<script src="js/vagueTime.js"></script>
+<script src="js/vagueTimeUpdater.js"></script>
