@@ -22,3 +22,7 @@ body {
 .package {
     margin-bottom: 50px;
 }
+
+.about {
+    font-size: 120%;
+}

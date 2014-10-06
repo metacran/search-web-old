@@ -1,5 +1,52 @@
 ---
 layout: default
-title: About CRAN package search
+title: About CRAN R package search
 ---
 
+<div class="container about">
+  <div class="row">
+    <div class="col-md-8">
+
+      <h1>About the <a href="index.html">CRAN R package search</a></h1>
+
+      <h3>What?</h3>
+      <p>This is a service that searches the descriptions of all active
+      CRAN R packages.</p>
+
+      <h3>Why?</h3>
+      <p>Searching is just easier than organizing.</p>
+
+      <p>How would you find all packages that are related
+	to <em>networks?</em>. You can try searching manually on the CRAN
+	web pages, or use CRAN task views, and these sometimes work, but
+	often they don't. You cannot easily search in the package
+	descriptions, and task views are not updated as frequently as the
+	packages themselves. Taks views are also opinionated, and not all
+	packages are (or even can be!) classified into the existing
+	categories.</p>
+
+      <p>The existing R search services do a good job in many cases,
+	when you need to find a specific function, or need to know how
+	to perform a simple task in R. They are not the best at
+	finding R packages related to a given topic.</p>
+
+      <h3>How?</h3>
+      <p>We check CRAN frequently for changes, and update
+	<a href="https://github.com/metacran/crandb">our database</a>
+	if a new package was admitted to CRAN, a package was updated, or
+	archived. The database is automatically indexed by an
+	Elastissearch server.</p>
+
+      <h3>Command line version</h3>
+      <p>You can also use this service from within R, using the
+	<a href="https://github.com/metacran/seer">seer package</a>.</p>
+
+      <h3>Contributions</h3>
+      <p>Your contribution is welcome! Please open an issue in
+	our <a href="https://github.com/metacran/search/issues">issue
+	  tracker</a> to tell us what you think, or if you found a bug.
+	Github pull requests are also welcome!</p>
+
+    </div>
+  </div>
+</div>
