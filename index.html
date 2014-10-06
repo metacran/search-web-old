@@ -13,10 +13,16 @@ extrajs:
     <h2 class="text-center search-title">CRAN R package search</h2>
     <form role="form" class="text-center" action="search.html">
       <div class="form-group">
-	<input class="form-control input-lg" id="exampleInputEmail1"
-	       autofocus="autofocus" name="q">
+	<div class="input-group">
+	  <input class="form-control input-lg" id="cran-input"
+		 autofocus="autofocus" name="q">
+	  <span class="input-group-btn">
+	    <button class="btn btn-default btn-lg" type="submit">
+	      <span class="glyphicon glyphicon-search"></span>
+	    </button>
+	  </span>
+	</div>
       </div>
-      <button type="submit" class="btn btn-default btn-lg">Search</button>
     </form>
   </div>
 </div>
