@@ -31,11 +31,11 @@ function format_package(pkg) {
     var url=pkg.URL ? ('<div class="packageurl">' + linkify(pkg.URL) +
 		       '</div>') : ''
     var ver=myindex.replace("cran-", "")
-    var vlink='<a href="https://github.com/cran/' +
+    var vlink='<a href="http://cran.r-project.org/package=' +
 	pkg.Package + (ver==="devel" ? '' : '/tree/R-' + ver) +
 	'">' + pkg.Version + '</a>'
     var html='<div class="package">' +
-	'<h3><a href="https://github.com/cran/' + pkg.Package + '">' + 
+	'<h3><a href="http://cran.r-project.org/package=' + pkg.Package + '">' + 
 	pkg.Package + '</a>' + ' ' + vlink + '<small> &mdash; by ' +
 	author + ', ' + time + '</small></h3>' +
 	'<h4>' + pkg.Title + '</h4>' +
@@ -76,26 +76,23 @@ function add_results(hits, no_hits, took) {
 	add_results_html(hits[i]._source, div)
     }
 
-    if (no_hits > 10) { 
-	if (mypage != '1') {
-	    pag_text += '<span><a href="?q=' + encodeURIComponent(query.q) + 
-		'&page=' + (mypage-1) + '">&lt</a></span>'
-	}
+    if (no_hits > 10) {
+	pag_text += '<ul class="pagination">';
+	var disabled = mypage == 1 ? ' class="disabled"' : '';
+	pag_text += '<li' + disabled + '><a href="?q=' +
+	    encodeURIComponent(query.q) +
+	    '&page=' + (mypage-1) + '">&laquo;</a></li>';
 	for (var i=1; i <= nop; i++) {
+	    var active = i == mypage ? ' class="active"' : '';
 	    var paglink='<a href="?q=' + encodeURIComponent(query.q) +
-		'&page=' + i + '">' + i + "</a>"
-	    if (i == mypage) {
-		paglink = '<strong>' + paglink + '</strong>' 
-		pag_text += '<span class="current_page">' +
-		    paglink + '</span>'
-	    } else {
-		pag_text += '<span>' + paglink + '</span>'
-	    }
+		'&page=' + i + '">' + i + "</a>";
+	    pag_text += '<li' + active + '>' + paglink + '</li>';
 	}
-	if (mypage != nop) {
-	    pag_text += '<span><a href="?q=' + encodeURIComponent(query.q) + 
-		'&page=' + (+mypage+1) + '">&gt</a></span>'	
-	}
+	disabled = mypage == nop ? ' class="disabled"' : '';
+	pag_text += '<li' + disabled + '><a href="?q=' +
+	    encodeURIComponent(query.q) +
+	    '&page=' + (+mypage+1) + '">&raquo;</a></li>';
+	pag_text += '</ul>';
 	pag.innerHTML = pag_text;
     }
 }
