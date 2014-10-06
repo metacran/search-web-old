@@ -10,12 +10,13 @@ extrajs:
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron search-box">
   <div class="container">
-    <h2 class="text-center search-title">CRAN R package search</h2>
+    <h1 class="text-center search-title">Search <i class="icon-rlogo"></i>
+      packages</h1>
     <form role="form" class="text-center" action="search.html">
       <div class="form-group">
 	<div class="input-group">
 	  <input class="form-control input-lg" id="cran-input"
-		 autofocus="autofocus" name="q">
+		 autofocus="autofocus" placeholder="Search CRAN" name="q">
 	  <span class="input-group-btn">
 	    <button class="btn btn-default btn-lg" type="submit">
 	      <span class="glyphicon glyphicon-search"></span>
@@ -24,6 +25,15 @@ extrajs:
 	</div>
       </div>
     </form>
+    <p class="text-center"><small>Search for package names, keywords, people.
+      Examples:
+      <a href="search.html?q=matrices">matrices</a>,
+      <a href="search.html?q=C%2B%2B">C++</a>,
+      <a href="search.html?q=spectral%20clustering">spectral clustering</a>,
+      <a href="search.html?q=pipes">pipes</a>,
+      <a href="search.html?q=testthat">testthat</a>,
+      <a href="search.html?q=Romain">Romain</a>.
+    </small></p>
   </div>
 </div>
 
