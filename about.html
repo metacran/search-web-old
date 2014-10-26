@@ -12,13 +12,13 @@ title: About CRAN R package search
 
       <h3>What?</h3>
       <p>This is a service that searches the descriptions of all active
-      CRAN <i class="icon-rlogo"></i> packages.</p>
+      CRAN R packages.</p>
 
       <h3>Why?</h3>
       <p>Searching is just easier than organizing.</p>
 
       <p>How would you find all packages that are related
-	to <em>networks?</em>. You can try searching manually on the CRAN
+	to <em>networks?</em> You can try searching manually on the CRAN
 	web pages, or use CRAN task views, and these sometimes work, but
 	often they don't. You cannot easily search in the package
 	descriptions, and task views are not updated as frequently as the
@@ -26,23 +26,32 @@ title: About CRAN R package search
 	packages are (or even can be!) classified into the existing
 	categories.</p>
 
-      <p>The existing <i class="icon-rlogo"></i> search services do a good
+      <p>The existing R search services do a good
 	job in many cases, when you need to find a specific function, or
-	need to know how to perform a simple task in <i
-	class="icon-rlogo"></i>. They are not the best at finding <i
-	class="icon-rlogo"></i> packages related to a given topic.</p>
+	need to know how to perform a simple task in R. They are not the
+	best at finding	R packages related to a given topic.</p>
 
       <h3>How?</h3>
       <p>We check CRAN frequently for changes, and update
 	<a href="https://github.com/metacran/crandb">our database</a>
 	if a new package was admitted to CRAN, a package was updated, or
 	archived. The database is automatically indexed by an
-	Elastissearch server.</p>
+	Elasticsearch server.</p>
 
       <h3>Command line version</h3>
-      <p>You can also use this service from within R, using the
+      <p>You can also use this service from within R, with the
 	<a href="https://github.com/metacran/seer">seer package</a>.</p>
 
+      <h3>Caveat</h3>
+      <p>
+	Because we don't want to host a web server, but rather just use
+	Github Pages, the results of the searches are formatted via
+	JavaScript. So the search only works in JavaScript supported
+	browsers, and it is not as robust as it could be with our
+	own server. If this service will prove useful, then we will
+	eventually move to our own search server.
+      </p>
+      
       <h3>Contributions</h3>
       <p>Your contribution is welcome! Please open an issue in
 	our <a href="https://github.com/metacran/search/issues">issue
