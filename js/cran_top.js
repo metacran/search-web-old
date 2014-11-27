@@ -35,7 +35,7 @@ function add_recent(data) {
 }
 
 function get_recent() {
-    var recent_url = "http://db.r-pkg.org/-/pkgreleases?limit=20&descending=true";
+    var recent_url = "http://crandb.r-pkg.org/-/pkgreleases?limit=20&descending=true";
     $.get(recent_url, add_recent)
 }
 
@@ -54,7 +54,7 @@ function add_topdep(data) {
 }
 
 function get_topdep() {
-    var topdep_url = "http://db.r-pkg.org/-/topdeps/devel";
+    var topdep_url = "http://crandb.r-pkg.org/-/topdeps/devel";
     $.get(topdep_url, add_topdep)
 }
 
