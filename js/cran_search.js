@@ -115,6 +115,7 @@ client.search({
 	"query": {
 	    "function_score": {
 		"query": { "multi_match": {
+		    "tie_breaker": 1.0,
 		    fields: ["Package^10", "Title^5", "Description",
 			     "Author^3", "Maintainer^4", "_all" ],
 		    query: query.q } },
